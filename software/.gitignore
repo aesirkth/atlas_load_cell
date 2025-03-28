@@ -1,0 +1,6 @@
+zephyr
+bootloader
+modules
+tools
+env/zephyr-env
+build

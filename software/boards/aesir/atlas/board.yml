@@ -1,0 +1,6 @@
+board:
+  name: atlas
+  full_name: atlas load cell
+  vendor: aesir
+  socs:
+    - name: stm32u575xx
