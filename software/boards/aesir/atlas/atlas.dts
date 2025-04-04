@@ -1,15 +1,8 @@
-/*
- * Copyright (c) 2021 Linaro Limited
- *
- * SPDX-License-Identifier: Apache-2.0
- */
-
 /dts-v1/;
 #include "atlas-common.dtsi"
 
 / {
 	model = "aesir atlas load cell";
-	compatible = "st,stm32u575zi-nucleo-q";
 
 	#address-cells = <1>;
 	#size-cells = <1>;
@@ -22,16 +15,15 @@
 		zephyr,canbus = &fdcan1;
 	};
 
-	aliases {
-		led0 = &green_led_1;
-		sw0 = &user_button;
-		pwm-led0 = &pwm_led_1;
-		pwm-led1 = &pwm_led_2;
-		watchdog0 = &iwdg;
-		volt-sensor0 = &vref1;
-		volt-sensor1 = &vbat4;
-		die-temp0 = &die_temp;
-	};
+	leds {
+        compatible = "gpio-leds";
+
+        led_io: led_io {
+            gpios = <&gpioa 9 GPIO_ACTIVE_HIGH>;
+            label = "Green IO LED";
+        };
+    };
+
 };
 
 &usart1 {
