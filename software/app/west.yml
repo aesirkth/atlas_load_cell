@@ -16,4 +16,4 @@ manifest:
         path-prefix: deps
 
   self:
-    path: application
+    path: app
