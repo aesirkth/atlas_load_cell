@@ -46,12 +46,12 @@ west zephyr-export
 
 with pip:
 ```bash
-pip install -U -r ext/zephyr/scripts/requirements-base.txt
+pip install -r ext/zephyr/scripts/requirements-base.txt
 ```
 
 or with uv:
 ```bash
-uv pip install -U -r ext/zephyr/scripts/requirements-base.txt
+uv pip install -r ext/zephyr/scripts/requirements-base.txt
 ```
 
 ### install zephyr sdk
