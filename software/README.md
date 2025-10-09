@@ -3,6 +3,16 @@
 download and install stm32 cube prog 
 https://www.st.com/en/development-tools/stm32cubeprog.html
 
+### clone this repo
+```bash
+git clone git@github.com:aesirkth/atlas_load_cell.git
+```
+
+### move to the software directory
+```bash
+cd atlas_load_cell/software
+```
+
 ### setup python env
 
 with pip:
