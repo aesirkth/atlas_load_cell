@@ -1,6 +1,6 @@
-zephyr
-bootloader
-modules
-tools
-env/zephyr-env
+*.egg-info
+__pycache__
+
+.vscode
+
 build
