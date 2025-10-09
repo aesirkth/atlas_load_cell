@@ -22,14 +22,6 @@
             label = "Green IO LED";
         };
     };
-
-	force_sens_1: nau7802_loadcell@2A {
-		compatible = "nuvoton,nau7802_loadcell";
-		reg = <0x2A>;
-		drdy-gpios = <&gpioa 8 GPIO_ACTIVE_HIGH>;
-		conversions-per-second = <320>; //SPS
-		gain = <128>;
-	};
 };
 
 &zephyr_udc0 {
