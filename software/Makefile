@@ -9,3 +9,7 @@ flash-usb:
 .PHONY: flash-swd
 flash-swd:
 	west flash
+
+.PHONY: clean
+clean:
+	rm -rf build
