@@ -1,0 +1,37 @@
+manifest:
+  remotes:
+    - name: zephyrproject
+      url-base: https://github.com/zephyrproject-rtos
+    - name: zephyr_macos_stm32prog
+      url-base: https://github.com/PepperoniPingu/
+
+  projects:
+    - name: zephyr
+      remote: zephyr_macos_stm32prog
+      revision: v4.2.0-macos-stm32prog
+      path: ext/zephyr
+      west-commands: scripts/west-commands.yml
+
+    - name: cmsis
+      remote: zephyrproject
+      revision: 512cc7e895e8491696b61f7ba8066b4a182569b8
+      path: ext/zephyr/modules/hal/cmsis
+    - name: cmsis_6
+      remote: zephyrproject
+      repo-path: CMSIS_6
+      revision: 06d952b6713a2ca41c9224a62075e4059402a151
+      path: ext/zephyr/modules/hal/cmsis_6
+
+    - name: hal_stm32
+      remote: zephyrproject
+      revision: 1e753266ddfb4b07a8a0b1ec566e9637ea45d5ef
+      path: ext/zephyr/modules/hal/stm32
+
+    # out of tree device driver
+    - name: NAU7802_LOADCELL
+      path: modules/nau7802_loadcell
+      revision: refs/tags/zephyr-v3.7.0
+      url: https://github.com/TinNotTim/nau7802_loadcell_zephyr_driver
+
+  self:
+    path: .
