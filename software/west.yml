@@ -30,7 +30,7 @@ manifest:
     # out of tree device driver
     - name: NAU7802_LOADCELL
       path: modules/nau7802_loadcell
-      revision: refs/tags/zephyr-v3.7.0
+      revision: main
       url: https://github.com/TinNotTim/nau7802_loadcell_zephyr_driver
 
   self:
