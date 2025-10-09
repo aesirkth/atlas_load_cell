@@ -3,6 +3,7 @@
 download and install stm32 cube prog 
 https://www.st.com/en/development-tools/stm32cubeprog.html
 
+
 ### clone this repo
 ```bash
 git clone git@github.com:aesirkth/atlas_load_cell.git
@@ -11,6 +12,13 @@ git clone git@github.com:aesirkth/atlas_load_cell.git
 ### move to the software directory
 ```bash
 cd atlas_load_cell/software
+```
+
+### add udev rules
+if the stm32cubeprog didn't add the udev files you can do this manually by:
+```bash
+cp 49-stlinkv3.rules /etc/udev/rules.d/
+sudo udevadm trigger 
 ```
 
 ### setup python env
@@ -71,7 +79,7 @@ make
 to flash over usb enter bootloader by holding the upper button while pressing the
 lower button briefly. and then:
 ```bash
-make flash-app
+make flash-swd
 ```
 
 
