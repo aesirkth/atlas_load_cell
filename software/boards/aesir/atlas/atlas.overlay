@@ -1,0 +1,13 @@
+&i2c2 {
+
+	status = "okay";
+
+	force_sens_1: nau7802_loadcell@2A {
+		// label = "NAU7802_1";
+		compatible = "nuvoton,nau7802_loadcell";
+		reg = <0x2A>;
+		drdy-gpios = <&gpiod 1 GPIO_ACTIVE_HIGH>;
+		conversions-per-second = <320>; //SPS
+		gain = <128>;
+	};
+};
